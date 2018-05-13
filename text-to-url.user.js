@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name Text to URL
 // @namespace https://github.com/T1mL3arn
+// @author T1mL3arn
 // @description:ru Конвертирует текст в виде ссылок в реальные ссылки, на которые можно кликнуть.
 // @description:en Converts url-like text into clickable url.
 // @match *://*/*
-// @version 1.0
+// @version 1.0.1
 // @run-at document-end
 // @license GPLv3
 // @supportURL https://greasyfork.org/en/scripts/367955-text-to-url/feedback
