@@ -32,7 +32,7 @@ let obs = new MutationObserver((changes, obs) => {
 });
 
 function fixLinks(node) {
-  if (node.tagName != 'A') {
+  if (node.tagName != 'A' && node.tagName != 'SCRIPT') {
     // this is a text node
     if (node.nodeType === 3) {
       let content = node.textContent;
