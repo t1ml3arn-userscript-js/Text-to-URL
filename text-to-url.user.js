@@ -5,7 +5,7 @@
 // @description:ru Конвертирует текст в виде ссылок в реальные ссылки, на которые можно кликнуть.
 // @description:en Converts url-like text into clickable url.
 // @match *://*/*
-// @version 1.0.1
+// @version 1.1
 // @run-at document-end
 // @license GPLv3
 // @supportURL https://greasyfork.org/en/scripts/367955-text-to-url/feedback
@@ -67,6 +67,7 @@ function wrapTextNode(node) {
     anchor.textContent = fullMatch;
     anchor.target = '_blank';
     anchor.title = 'open link in a new tab';
+    anchor.setAttribute('ttu-wrapped', '1');
     linkEreg.lastIndex = 0;
     
     sibling = getNextTextSibling(anchor);
