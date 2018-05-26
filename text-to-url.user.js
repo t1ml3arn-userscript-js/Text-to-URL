@@ -13,8 +13,8 @@
 // ==/UserScript==
 
 ///TODO improve ereg to match URI syntax (https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#Generic_syntax) ?
-let linkEreg = /(https|http|ftp|file):\/\/.+?(?=\s|$|[,.]\s)/gi;
-let linkEregLocal = /(https|http|ftp|file):\/\/.+?(?=\s|$|[,.]\s)/i;
+let linkEreg = /(?:https|http|ftp|file):\/\/.+?(?=[,.]?(?:\s|$))/gi;
+let linkEregLocal = /(?:https|http|ftp|file):\/\/.+?(?=[,.]?(?:\s|$))/i;
 let obsOptions = { childList: true, subtree: true };
 let wrappedCount = 0;
 
