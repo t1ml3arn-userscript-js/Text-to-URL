@@ -5,15 +5,16 @@
 // @description:ru Конвертирует текст в виде ссылок в реальные ссылки, на которые можно кликнуть.
 // @description:en Converts url-like text into clickable url.
 // @match *://*/*
-// @version 1.1
+// @version 1.1.1
 // @run-at document-end
 // @license GPLv3
 // @supportURL https://greasyfork.org/en/scripts/367955-text-to-url/feedback
 // @homepageURL https://greasyfork.org/en/scripts/367955-text-to-url
 // ==/UserScript==
 
-let linkEreg = /(https|http|ftp|file):\/\/.+?(?=\s|$)/gi;
-let linkEregLocal = /(https|http|ftp|file):\/\/.+?(?=\s|$)/i;
+///TODO improve ereg to match URI syntax (https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#Generic_syntax) ?
+let linkEreg = /(https|http|ftp|file):\/\/.+?(?=\s|$|,)/gi;
+let linkEregLocal = /(https|http|ftp|file):\/\/.+?(?=\s|$|,)/i;
 let obsOptions = { childList: true, subtree: true };
 let wrappedCount = 0;
 
