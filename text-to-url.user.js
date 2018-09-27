@@ -33,6 +33,9 @@ let obs = new MutationObserver((changes, obs) => {
 });
 
 function fixLinks(node) {
+  ///TODO deprecate for a while or update it.
+  // Since there is script for the same task (name linkifier ?)
+  // which does it much better than this script.
 
   ///TODO consider not to run script for form and input elements!
   ///TODO also search syntax-highlith libraries and also exclude them 
